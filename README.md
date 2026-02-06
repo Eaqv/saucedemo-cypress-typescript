@@ -17,7 +17,7 @@ Este proyecto es un framework de automatización de pruebas de extremo a extremo
 ## 🚀 Instalación y Uso
 
 1. Clonar el repositorio:
-git clone https://github.com/TU_USUARIO/saucedemo-cypress-typescript.git
+git clone https://github.com/Eaqv/saucedemo-cypress-typescript.git
 
 2. Instalar dependencias:
 npm install

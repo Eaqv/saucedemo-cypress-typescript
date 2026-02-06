@@ -18,16 +18,12 @@ Este proyecto es un framework de automatización de pruebas de extremo a extremo
 1. Clonar el repositorio:
    ```bash
    git clone [https://github.com/TU_USUARIO/saucedemo-cypress-typescript.git](https://github.com/TU_USUARIO/saucedemo-cypress-typescript.git)
-
 2.Instalar dependencias:
-  ```Bash
+  ```bash
   npm install
-
 3.Ejecutar pruebas en modo interfaz:
-  ```Bash
+  ```bash
   npx cypress open
-
 4.Ejecutar pruebas en modo headless (consola):
-
-  ```Bash
+  ```bash
   npx cypress run

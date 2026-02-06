@@ -1,38 +1,36 @@
-SauceLabs E2E Automation Framework 🛒
-Este proyecto es un framework de automatización de pruebas de extremo a extremo (E2E) para la página SauceDemo, desarrollado con un enfoque profesional y escalable utilizando herramientas modernas.
+# SauceLabs E2E Automation Framework 🛒
 
-🛠️ Tech Stack
-Framework: Cypress
+Este proyecto es un framework de automatización de pruebas de extremo a extremo (E2E) para la página https://www.saucedemo.com/, desarrollado con un enfoque profesional y escalable.
 
-Lenguaje: TypeScript
+## 🛠️ Tech Stack
+* Framework: Cypress
+* Lenguaje: TypeScript
+* Patrón de Diseño: Page Object Model (POM)
+* Gestión de Proyecto: Jira (Tablero Kanban)
+* CI/CD: GitHub Actions (Próximamente)
 
-Patrón de Diseño: Page Object Model (POM)
+## 🏗️ Estructura del Proyecto
+* cypress/e2e       → Contiene los scripts de prueba.
+* cypress/pages     → Contiene los objetos de página (clases POM).
+* cypress/fixtures  → Archivos de datos estáticos (JSON).
 
-Gestión de Proyecto: Jira (Tablero Kanban)
+## 🚀 Instalación y Uso
 
-CI/CD: GitHub Actions (Próximamente)
-
-🏗️ Estructura del Proyecto
-cypress/e2e: Contiene los scripts de prueba (test cases).
-
-cypress/pages: Contiene los objetos de página (clases POM).
-
-cypress/fixtures: Archivos de datos estáticos (JSON).
-
-🚀 Instalación y Uso
-Clonar el repositorio:
-
-Bash
+1. Clonar el repositorio:
 git clone https://github.com/TU_USUARIO/saucedemo-cypress-typescript.git
-Instalar dependencias:
 
-Bash
+2. Instalar dependencias:
 npm install
-Ejecutar pruebas (Interfaz Gráfica):
 
-Bash
+3. Ejecutar pruebas (Interfaz Gráfica):
 npx cypress open
-Ejecutar pruebas (Consola / Headless):
 
-Bash
+4. Ejecutar pruebas (Consola / Headless):
 npx cypress run
+
+## 📌 Notas
+- Asegúrate de tener Node.js instalado (versión recomendada: LTS).
+- El framework está preparado para escalar y agregar integración continua.
+
+---
+Proyecto de automatización E2E con buenas prácticas y enfoque profesional.

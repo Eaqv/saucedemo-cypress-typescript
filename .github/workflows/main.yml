@@ -1,0 +1,13 @@
+name: End-to-end tests
+on: push # Se activa cada vez que subes código
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest # Una computadora virtual de Linux
+    steps:
+      - name: Checkout # Descarga tu código en esa computadora
+        uses: actions/checkout@v4
+
+      - name: Cypress run # Instala dependencias y corre los tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome

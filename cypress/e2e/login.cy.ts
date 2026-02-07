@@ -13,4 +13,19 @@ describe('Pruebas de Autenticación - SauceDemo', () => {
     loginPage.clickLogin();
     loginPage.verificarLoginExitoso();
   });
+
+  it('Deberia mostrar erroe con usuario bloqueado', () => {
+    loginPage.escribirUsuario('locked_out_user');
+    loginPage.escribirPassword('secret_sauce');
+    loginPage.clickLogin();
+    loginPage.verificarMensajeError('Epic sadface: Sorry, this user has been locked out.');
+  });
+
+  it('Deberia mostrar error con usuario invalido', () => {
+    loginPage.escribirUsuario('usuario_falso');
+    loginPage.escribirPassword('clave_falsa');
+    loginPage.clickLogin();
+    loginPage.verificarMensajeError('Epic sadface: Username and password do not match any user in the system');
+  });
+
 });

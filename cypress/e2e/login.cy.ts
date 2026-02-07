@@ -25,7 +25,7 @@ describe('Pruebas de Autenticación - SauceDemo', () => {
     loginPage.escribirUsuario('usuario_falso');
     loginPage.escribirPassword('clave_falsa');
     loginPage.clickLogin();
-    loginPage.verificarMensajeError('Epic sadface: Username and password do not match any user in the system');
+    loginPage.verificarMensajeError('Epic sadface: Username and password do not match any user in this service');
   });
 
 });

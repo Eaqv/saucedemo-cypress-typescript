@@ -1,13 +1,37 @@
-name: End-to-end tests
-on: push # Se activa cada vez que subes código
+name: E2E Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
-  cypress-run:
-    runs-on: ubuntu-latest # Una computadora virtual de Linux
+  e2e-tests:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout # Descarga tu código en esa computadora
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Cypress run # Instala dependencias y corre los tests
-        uses: cypress-io/github-action@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          browser: chrome
+          node-version: 20 # Versión estable
+          cache: 'npm'    # Cache para velocidad
+
+      - name: Install dependencies
+        run: npm ci      # 'ci' es más rápido y limpio que 'install'
+
+      - name: Run Cypress tests
+        run: npm run cy:run
+
+      - name: Upload Test Artifacts
+        uses: actions/upload-artifact@v4
+        if: always() # Se suben aunque fallen los tests
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots
+            cypress/videos
+          retention-days: 5

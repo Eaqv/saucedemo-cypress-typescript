@@ -8,7 +8,7 @@ class LoginPage {
 
     // 2. Definimos las Acciones (lo que el usuario puede HACER)
     visitar() {
-        cy.visit('https://www.saucedemo.com/');
+        cy.visit('/'); // Ahora usa la baseUrl automáticamente
     }
 
     escribirUsuario(username: string) {

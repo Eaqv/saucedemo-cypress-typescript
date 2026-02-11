@@ -19,7 +19,7 @@ This assessment covers the core E2E journey of an e-commerce user, from authenti
 * **Expected Result:** Redirected to /inventory and "Products" header is visible.
 | TC-02 | High | Add multiple items to cart and verify badge count | Happy Path |
 | TC-03 | High | Complete full checkout flow (Checkout: Complete) | Happy Path |
-### Detailed Test Case Example: TC-03 (Happy Path Login)
+### Detailed Test Case Example: TC-03 (Happy Path Checkout)
 * **Pre-condition:** User is on the Login page.
 * **Steps:**
   1. Enter 'standard_user'.

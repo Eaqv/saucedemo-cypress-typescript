@@ -12,7 +12,7 @@ This repository contains a professional E2E automation framework for the SauceDe
 ## 📂 Project Structure
 * `cypress/e2e/`: Test suites (Login and Purchase flows).
 * `cypress/pages/`: Page Object classes.
-* `cypress/fixtures/`: Static test data (if applicable).
+* `cypress/fixtures/`: Static test data (fixtures) used for data-driven testing scenarios.
 * `.github/workflows/`: CI/CD pipeline configuration.
 * `TEST_PLAN.md`: Strategic test planning and test cases.
 * `BUG_REPORT.md`: Detailed bug reporting for detected issues.
@@ -25,7 +25,7 @@ This repository contains a professional E2E automation framework for the SauceDe
 ### Installation
 1. Clone the repository.
 2. Install dependencies:
-   npm ci
+   npm install
 3. Running Tests   
 
    -Headless mode (Console):
@@ -40,12 +40,3 @@ This project uses GitHub Actions. Every push or pull request to the main branch 
 - Artifacts: Videos and screenshots are automatically uploaded upon completion of the pipeline.
 
 ### Develop by Edgar Alejandro Quintero Vivas
-
-
-
-
-
-
-
-
-

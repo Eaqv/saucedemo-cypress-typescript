@@ -1,5 +1,6 @@
 import { loginPage } from '../pages/LoginPage';
 import { productsPage } from '../pages/ProductsPage';
+import { cartPage } from '../pages/CartPage'; // <--- Nueva importación
 import { checkoutPage } from '../pages/CheckoutPage';
 
 describe('Flujo de Compra E2E', () => {
@@ -16,7 +17,8 @@ describe('Flujo de Compra E2E', () => {
     it('Debería completar una compra de principio a fin', () => {
         productsPage.addItemToCart(0);
         productsPage.goToCart();
-        cy.get('[data-test="checkout"]').click();
+        cartPage.verifyItemInCart(); // <--- Uso del POM
+        cartPage.clickCheckout();    // <--- Uso del POM
 
         checkoutPage.fillInformation('Alejandro', 'Test', '12345');
         checkoutPage.clickContinue();
@@ -27,7 +29,7 @@ describe('Flujo de Compra E2E', () => {
     it('Debería mostrar error si faltan datos en el checkout (Edge Case)', () => {
         productsPage.addItemToCart(0);
         productsPage.goToCart();
-        cy.get('[data-test="checkout"]').click();
+        cartPage.clickCheckout();    // <--- Uso del POM
 
         checkoutPage.clickContinue();
         cy.get('[data-test="error"]').should('be.visible');

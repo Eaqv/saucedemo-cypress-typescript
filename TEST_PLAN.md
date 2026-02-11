@@ -14,7 +14,7 @@ This assessment covers the core E2E journey of an e-commerce user, from authenti
 | TC-03 | High | Complete full checkout flow (Checkout: Complete) | Happy Path |
 | TC-04 | High | Login failure with `locked_out_user` | Negative |
 | TC-05 | Medium | Attempt checkout with missing information (First/Last name) | Edge Case |
-| TC-06 | Medium | Verify broken images for `problem_user` on Inventory page | Cross-user |
+| TC-06 | Medium | Validate Inventory UI consistency: `standard_user` vs `problem_user` | Cross-user |
 | TC-07 | Medium | Remove items from cart and verify badge update | Happy Path |
 | TC-08 | Low | Reset App State from the Burger Menu | Functional |
 | TC-09 | Medium | Attempt login with invalid credentials | Negative |
